@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+</head>
+<body>
+    <!-- <a-scene>
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow="cast: true">
+            <a-ring position="0 .5 0" scale="0.4 0.4 0.4"></a-ring>
+        </a-box>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow="receive: true"></a-plane>
+        <a-sky color="#EFF"></a-sky>
+        <a-entity light="type: ambient; color: #BBB"></a-entity>
+        <a-entity light="type: directional; color: #FFF; intensity: 0.4; castShadow: true; shadowCameraFar: 6; shadowCameraVisible: true;" position="-0.5 1 1"></a-entity>
+    </a-scene> -->
+    <a-scene>
+        <a-assets>
+          <a-asset-item id="bag" src="https://cdn.jsdelivr.net/gh/tol-uno/3D-assets@main/poly.glb"></a-asset-item>
+        </a-assets>
+      
+        <a-entity position="0 0 -2" gltf-model="#bag"></a-entity>
+
+        <!-- <a-sky color="#EFF"></a-sky> -->
+        <a-entity light="type: ambient; color: #FFF; intensity: 2"></a-entity>
+        <!-- <a-entity light="type: directional; color: #FFF; intensity: 0.4; castShadow: true; shadowCameraFar: 6; shadowCameraVisible: false;" position="-0.5 1 1"></a-entity> -->
+      </a-scene>
+</body>
+</html>
