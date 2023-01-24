@@ -6,13 +6,6 @@
 </head>
 <body onload="init()">
 
-    <!-- <a-scene>
-        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow="cast: true">
-            <a-ring position="0 .5 0" scale="0.4 0.4 0.4"></a-ring>
-        </a-box>
-    </a-scene> -->
-
-
     <a-scene>
         <a-assets>
             <a-asset-item id="bag" src="https://cdn.jsdelivr.net/gh/tol-uno/3D-assets@main/poly.glb"></a-asset-item>
@@ -30,11 +23,11 @@
         <a-box id="colored_box" position="-1 1 -0.5" depth="0.2" height="0.2" width="0.2" color="red" shadow="cast: true"></a-box>
         <a-ring position="0 4 0" rotation="90 0 0" scale="3 3 3" color="orange"></a-ring>
 
-
         <a-sky color="#EFF"></a-sky>
         <a-entity light="type: ambient; color: #FFF; intensity: 1"></a-entity>
         <a-entity light="type: directional; color: #FFF; intensity: 1; castShadow: true; shadowCameraFar: 6; shadowCameraVisible: false;" position="-0.5 1 1"></a-entity>
     
     </a-scene>
+
 </body>
 </html>
