@@ -2,14 +2,16 @@
 <html>
 <head>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="handtracking.js"></script>
 </head>
-<body>
+<body onload="init()">
 
     <!-- <a-scene>
         <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow="cast: true">
             <a-ring position="0 .5 0" scale="0.4 0.4 0.4"></a-ring>
         </a-box>
     </a-scene> -->
+
 
     <a-scene>
         <a-assets>
@@ -19,13 +21,13 @@
     
         <a-camera></a-camera>
 
-        <a-entity id="leftHand" hand-tracking-controls="hand: left;" modelStyle="mesh" modelColor="blue"></a-entity>
-        <a-entity id="rightHand" hand-tracking-controls="hand: right;" modelStyle="mesh" modelColor="blue"></a-entity>
+        <a-entity id="leftHand" hand-tracking-controls="hand: left;" modelStyle="mesh" modelColor="#4CC3D9"></a-entity>
+        <a-entity id="rightHand" hand-tracking-controls="hand: right;" modelStyle="mesh" modelColor="#444444"></a-entity>
         
         <a-entity position="0 0.141 -.4" rotation="0 -60 0" gltf-model="#bag" shadow="cast: true"></a-entity>
         <a-entity position="0 0 0" scale="0.01 0.01 0.01" gltf-model="#duck" shadow="cast: true"></a-entity>
         <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#333333" shadow="receive: true"></a-plane>
-        <a-box position="-1 1 -0.5" depth="0.2" height="0.2" width="0.2" color="red" shadow="cast: true"></a-box>
+        <a-box id="colored_box" position="-1 1 -0.5" depth="0.2" height="0.2" width="0.2" color="red" shadow="cast: true"></a-box>
         <a-ring position="0 4 0" rotation="90 0 0" scale="3 3 3" color="orange"></a-ring>
 
 
