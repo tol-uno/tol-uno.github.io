@@ -11,11 +11,8 @@ function init(){
     text3 = document.querySelector("#text3");
     rightHand = document.querySelector("#rightHand");
 
-    // console.log("logged: " + colored_box.getAttribute("color"));
     colored_box.setAttribute("color", "purple");
-    // console.log("logged: " + colored_box.getAttribute("color"));
-    // console.log("text: " + text1.getAttribute("value"));
-    text1.setAttribute("value", "text1 - getting id");
+    text1.setAttribute("value", "GETTING PITCH POSITION");
 }
 
 
@@ -25,5 +22,11 @@ window.addEventListener("pinchstarted", function(e) {
     text1.setAttribute("value", e);
     text2.setAttribute("value", e.target.id);
     text3.setAttribute("value", toString(e.target));
-    console.log(e);
+})
+
+window.addEventListener("pinchmoved", function(e) {
+    text1.setAttribute("value", "full detail:" + e.pinchEventDetail);
+    text2.setAttribute("value", "full position:" + e.pinchEventDetail,position);
+    text3.setAttribute("value", "just x cord:" + e.pinchEventDetail,position.x);
+    colored_box.position = e.pinchEventDetail.position;
 })
