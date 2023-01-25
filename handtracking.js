@@ -28,5 +28,5 @@ window.addEventListener("pinchmoved", function(e) {
     text1.setAttribute("value", "full detail:" + e.detail);
     text2.setAttribute("value", "full position:" + e.detail.position);
     text3.setAttribute("value", "just x cord:" + e.detail.position.x);
-    colored_box.position = e.pinchEventDetail.position;
+    colored_box.position.x = e.pinchEventDetail.position.x;
 })
