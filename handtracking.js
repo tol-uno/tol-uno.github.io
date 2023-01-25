@@ -6,10 +6,10 @@ function init(){
     colored_box.setAttribute("color", "purple");
     console.log("logged: " + colored_box.getAttribute("color"));
     console.log("text: " + text.getAttribute("value"));
-    text.setAttribute("value", "POOPY poopy");
+    text.setAttribute("value", "js init ran");
 }
 
 window.addEventListener("pinchstarted", function(e) {
     colored_box.setAttribute("color", "green");
-    text.setAttribute("value",e)
+    text.setAttribute("value", "die die die die die")
 })
