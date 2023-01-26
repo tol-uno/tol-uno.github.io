@@ -14,7 +14,8 @@ AFRAME.registerComponent("debug-text", {
         this.el.components.text.data.value = text
         // getting debug level from box's component
         console.log(document.querySelector("#colored_box").components["pinch-moveable"].debugLevel);
-        document.querySelector("#colored_box").components["pinch-moveable"].moveCube();
+        document.querySelector("#colored_box").components["pinch-moveable"].moveCube("0.3 1.5 -1");
+        // document.querySelector("#colored_box").components["pinch-moveable"].moveCube(2 + " " + 2 + " " + -2);
     },
 
     update: function () {      
