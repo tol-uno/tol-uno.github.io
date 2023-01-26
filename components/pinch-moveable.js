@@ -13,7 +13,7 @@ AFRAME.registerComponent("pinch-moveable", {
     
         this.el.setAttribute("color", "purple");
         
-        text1.components["debug-text"].updateText("text updated by cube");
+        text1.components["debug-text"].updateText("cube move?");
         console.log(text1.components["debug-text"].debugLevel);
 
         window.addEventListener("pinchstarted", function(e) {
@@ -24,7 +24,7 @@ AFRAME.registerComponent("pinch-moveable", {
             text1.setAttribute("value", "z: " + e.detail.position.z);
             text2.setAttribute("value", "y: " + e.detail.position.y);
             text3.setAttribute("value", "x: " + e.detail.position.x);
-            document.querySelector("#colored_box").components["pinch-moveable"].moveCube(e.pinchEventDetail.position.x + " " + e.pinchEventDetail.position.y + " " + e.pinchEventDetail.position.z);
+            document.querySelector("#colored_box").components["pinch-moveable"].moveCube(e.detail.position.x + " " + e.detail.position.y + " " + e.detail.position.z);
         });
 
     },
