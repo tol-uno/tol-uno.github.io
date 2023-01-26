@@ -16,15 +16,15 @@ AFRAME.registerComponent("pinch-moveable", {
         text1.components["debug-text"].updateText("text updated by cube");
         console.log(text1.components["debug-text"].debugLevel);
 
-        this.el.addEventListener("pinchstarted", function(e) {
+        window.addEventListener("pinchstarted", function(e) {
             text3.setAttribute("value", toString(e.target));
         });
         
-        this.el.addEventListener("pinchmoved", function(e) {
+        window.addEventListener("pinchmoved", function(e) {
             text1.setAttribute("value", "z: " + e.detail.position.z);
             text2.setAttribute("value", "y: " + e.detail.position.y);
             text3.setAttribute("value", "x: " + e.detail.position.x);
-            document.querySelector("#colored_box").components["pinch-moveable"].moveCube(toString(e.pinchEventDetail.position.x + " " + e.pinchEventDetail.position.y + " " + e.pinchEventDetail.position.z));
+            document.querySelector("#colored_box").components["pinch-moveable"].moveCube(e.pinchEventDetail.position.x + " " + e.pinchEventDetail.position.y + " " + e.pinchEventDetail.position.z);
         });
 
     },
