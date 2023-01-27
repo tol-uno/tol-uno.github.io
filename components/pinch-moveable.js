@@ -22,7 +22,7 @@ AFRAME.registerComponent("pinch-moveable", {
         
         this.el.sceneEl.addEventListener("pinchstarted", function(e) {
             // do something when pinch starts anywhere
-            text1.setAttribute("value", "pinch started zone");
+            text1.setAttribute("value", "pinch started");
 
         });
         

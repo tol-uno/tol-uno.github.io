@@ -9,7 +9,7 @@ AFRAME.registerComponent('pressable', {
       this.handEls = document.querySelectorAll('[hand-tracking-controls]');
       this.pressed = false;
 
-    //   this.el.emit('pinchmoved');
+    //   this.el.emit('pressedended');
     //   console.log("tried to emit pinchmoved");
     },
   

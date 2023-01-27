@@ -6,7 +6,16 @@ AFRAME.registerComponent("debug-text", {
   
     init: function () {
         this.debugLevel = 69;
-      // Do something when component first attached.
+        // Do something when component first attached.
+      
+        this.el.sceneEl.addEventListener("pressedstarted", function(e) {
+        // when entity with pressable starts being pressed 
+        text1.setAttribute("value", "pressed red cube started");
+        });
+        this.el.sceneEl.addEventListener("pressedended", function(e) {
+            // when entity with pressable stops being pressed 
+            text1.setAttribute("value", "NOT pressing red cube");
+        });
         
     },
   
