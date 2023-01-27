@@ -8,6 +8,9 @@ AFRAME.registerComponent('pressable', {
       this.worldPosition = new THREE.Vector3();
       this.handEls = document.querySelectorAll('[hand-tracking-controls]');
       this.pressed = false;
+
+    //   this.el.emit('pinchmoved');
+    //   console.log("tried to emit pinchmoved");
     },
   
     tick: function () { // every frame

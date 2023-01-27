@@ -20,11 +20,13 @@ AFRAME.registerComponent("pinch-moveable", {
 
 
         
-        this.el.addEventListener("pinchstarted", function(e) {
+        this.el.sceneEl.addEventListener("pinchstarted", function(e) {
             // do something when pinch starts anywhere
+            text1.setAttribute("value", "pinch started zone");
+
         });
         
-        this.el.addEventListener("pinchmoved", function(e) {
+        this.el.sceneEl.addEventListener("pinchmoved", function(e) {
             // text1.setAttribute("value", "z: " + e.detail.position.z);
             text2.setAttribute("value", "y: " + e.detail.position.y);
             text3.setAttribute("value", "x: " + e.detail.position.x);
