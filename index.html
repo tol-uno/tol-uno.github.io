@@ -15,6 +15,7 @@
         <a-assets>
             <a-asset-item id="bag" src="https://cdn.jsdelivr.net/gh/tol-uno/3D-assets@main/poly.glb"></a-asset-item>
             <a-asset-item id="duck" src="https://cdn.jsdelivr.net/gh/tol-uno/3D-assets@main/DuckTex.glb"></a-asset-item>
+            <a-asset-item id="environment" src="https://cdn.jsdelivr.net/gh/tol-uno/3D-assets@main/desert_env.glb"></a-asset-item>
         </a-assets>
     
         <a-camera></a-camera>
@@ -28,7 +29,8 @@
 
         <a-entity position="0 0.141 -.4" rotation="0 -60 0" gltf-model="#bag" shadow="cast: true"></a-entity>
         <a-entity position="0 0 0" scale="0.01 0.01 0.01" gltf-model="#duck" shadow="cast: true"></a-entity>
-        <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7d7c77" shadow="receive: true"></a-plane>
+        <a-entity position="0 0 0" scale="1 1 1" gltf-model="#environment" shadow="cast: true"></a-entity>
+        <!-- <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7d7c77" shadow="receive: true"></a-plane> -->
         <a-box 
             id="colored_box" position="-1 1 -0.5" 
             depth="0.2" height="0.2" width="0.2" 

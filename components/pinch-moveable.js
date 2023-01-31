@@ -17,8 +17,6 @@ AFRAME.registerComponent("pinch-moveable", {
         console.log(text1.components["debug-text"].debugLevel);
 
 
-
-
         
         this.el.sceneEl.addEventListener("pinchstarted", function(e) {
             // do something when pinch starts anywhere
