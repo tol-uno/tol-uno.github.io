@@ -49,7 +49,18 @@ AFRAME.registerComponent("pinch-moveable", {
     },
   
     tick: function (time, timeDelta) {
-      // Do something on every scene tick or frame.
+      // // Do something on every scene tick or frame.
+      // var handEls = this.handEls;
+      // var handEl;
+      // var distance;
+      // for (var i = 0; i < handEls.length; i++) { // loop through (2) hands-tracking-controls
+      //   handEl = handEls[i];
+      //   distance = this.calculateFingerDistance(handEl.components['hand-tracking-controls'].indexTipPosition);
+      //   if (distance < this.data.pressDistance) { //if within press distance
+      //     if (!this.pressed) { this.el.emit('pressedstarted'); }    // if not yet pressed. emit event
+      //     this.pressed = true;                                      // make sure pressed is true
+      //     return;                                                   // return exits whole function
+      //   }
     }
 
   });
