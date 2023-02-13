@@ -27,7 +27,7 @@ AFRAME.registerComponent("debug-text", {
     },
 
     update: function () {      
-    // Do something when component's data is updated.
+    // Do something when component's data is updated. Also runs when initialized
     // console.log(document.querySelector("#colored_box").components["pinch-moveable"].data.debugLevel);
     console.log("update func from debug text");
     },

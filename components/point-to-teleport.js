@@ -1,16 +1,18 @@
 /* global AFRAME, THREE */    // what?
 AFRAME.registerComponent('point-to-teleport', {
     schema: {
-      pressDistance: { default: 0.06 }
+      // pressDistance: { default: 0.06 }
     },
   
     init: function () {
-      this.worldPosition = new THREE.Vector3();
-      this.handEls = document.querySelectorAll('[hand-tracking-controls]');
-      this.pressed = false;
+      // this.worldPosition = new THREE.Vector3();
+      // this.handEls = document.querySelectorAll('[hand-tracking-controls]');
+      // this.pressed = false;
 
     //   this.el.emit('pressedended');
     //   console.log("tried to emit pinchmoved");
+      this.el.cr
+      this.el.setAttribute("pressable", {pressDistance: "0.02"});
     },
   
     tick: function () { // every frame
