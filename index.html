@@ -4,13 +4,14 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="components/pinch-moveable.js"></script>
     <script src="components/debug-text.js"></script>
+    <script src="components/point-to-teleport.js"></script>
     <script src="components/pressable.js"></script> <!-- could be replaced with someone elses component on github -->
     
 
 </head>
 <body>
 
-    <a-scene > 
+    <a-scene fog="type: linear; color: #FFF; near: 2; far: 60;">
 
         <a-assets>
             <a-asset-item id="bag" src="https://cdn.jsdelivr.net/gh/tol-uno/3D-assets@main/poly.glb"></a-asset-item>
@@ -31,7 +32,7 @@
 
         <a-entity position="0 0.141 -.4" rotation="0 -60 0" gltf-model="#bag" shadow="cast: true"></a-entity>
         <a-entity position="0 0 0" scale="0.01 0.01 0.01" gltf-model="#duck" shadow="cast: true"></a-entity>
-        <a-entity position="0 0 0" scale="1 1 1" gltf-model="#environment" shadow="receive: true;"></a-entity>
+        <a-entity position="0 0 0" scale="1 1 1" gltf-model="#environment"></a-entity>
         <!-- <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7d7c77" shadow="receive: true"></a-plane> -->
         <a-box 
             id="colored_box" position="-1 1 -0.5"
@@ -48,8 +49,15 @@
             pressable
         ></a-entity>
         
-        <a-sky src="#sky"></a-sky>
-        <a-entity light="type: ambient; color: #FFF; intensity: 2;"></a-entity>
+
+        <a-entity light="type: point; intensity: 2; distance: 50; decay: 1" position="0 5 0"></a-entity>
+        <a-entity light="type: point; intensity: 1; distance: 90; decay: 1" position="0 10 7"></a-entity>
+
+
+        <!-- <a-sky src="#sky"></a-sky> -->
+
+        <a-entity light="type: ambient; color: #FFF; intensity: 0.2;"></a-entity>
+        
         <!-- <a-entity light="   type: directional;
                             intensity: 1;
                             castShadow: true;
