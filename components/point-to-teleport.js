@@ -31,7 +31,7 @@ AFRAME.registerComponent('point-to-teleport', {
           // document.querySelector("#text3").setAttribute("value", "x: " + fingerx + " y: " + fingery+ " z: " + fingerz);
           document.querySelector("#text1").setAttribute("value", handEl.components['hand-tracking-controls'].jointEls.length);
           document.querySelector("#text2").setAttribute("value", handEl.components['hand-tracking-controls'].jointEls[0].values);
-          document.querySelector("#text3").setAttribute("value", showProps(jointsArray[0], "jointsArray[0]");
+          document.querySelector("#text3").setAttribute("value", showProps(jointsArray[0], "jointsArray[0]"));
           
 
         
