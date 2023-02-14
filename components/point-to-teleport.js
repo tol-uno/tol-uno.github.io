@@ -6,11 +6,10 @@ AFRAME.registerComponent('point-to-teleport', {
   
     init: function () {
       
-      // this.worldPosition = new THREE.Vector3();
       handEl = document.querySelector('[hand-tracking-controls]');
-      // this.pressed = false;
+      
+      console.log(handEl.components['hand-tracking-controls']);
 
-      //   this.el.emit('pressedended');
 
       var teleButton = document.createElement("a-entity");
       this.el.appendChild(teleButton);
@@ -26,7 +25,8 @@ AFRAME.registerComponent('point-to-teleport', {
           var fingerz = handEl.components['hand-tracking-controls'].indexTipPosition.z
 
           teleButton.setAttribute("position", { x: fingerx , y: fingery , z: fingerz});
-          document.querySelector("#text3").setAttribute("value", "x: " + fingerx + " y: " + fingery+ " z: " + fingerz);
+          // document.querySelector("#text3").setAttribute("value", "x: " + fingerx + " y: " + fingery+ " z: " + fingerz);
+          document.querySelector("#text3").setAttribute("value", handEl.components['hand-tracking-controls'].jointEls);
           
 
         
@@ -40,4 +40,6 @@ AFRAME.registerComponent('point-to-teleport', {
     },
 
   });
+  
+
   
