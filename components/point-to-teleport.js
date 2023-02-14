@@ -25,6 +25,7 @@ AFRAME.registerComponent('point-to-teleport', {
     },
 
     tick: function () { // every frame
+      
     },
 
   });

@@ -10,9 +10,7 @@ AFRAME.registerComponent("pinch-moveable", {
         var text1 = document.querySelector("#text1");
         var text2 = document.querySelector("#text2");
         var text3 = document.querySelector("#text3");
-    
-        this.el.setAttribute("color", "#67645f");
-        
+           
         text1.components["debug-text"].updateText("cube move?");
         console.log(text1.components["debug-text"].debugLevel);
 

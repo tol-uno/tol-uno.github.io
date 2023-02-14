@@ -22,12 +22,12 @@
 
         </a-assets>
     
-        <a-camera></a-camera>
-
-
-        <a-entity id="leftHand" hand-tracking-controls="hand: left; modelStyle: dots; modelColor: #b4b5ad" point-to-teleport></a-entity>
-        <a-entity id="rightHand" hand-tracking-controls="hand: right; modelStyle: dots; modelColor: #b4b5ad"></a-entity>
-        
+        <a-camera>
+            <a-entity id="leftHand" hand-tracking-controls="hand: left; modelStyle: dots; modelColor: #b4b5ad" point-to-teleport>
+                <a-sphere radius="0.04" color="green"></a-sphere>
+            </a-entity>
+            <a-entity id="rightHand" hand-tracking-controls="hand: right; modelStyle: dots; modelColor: #b4b5ad"></a-entity>
+        </a-camera>
 
         <a-text id="text1" position="0 1.6 -1" value="text1" color="#1b1b19" width="2" debug-text></a-text>
         <a-text id="text2" position="0 1.3 -1" value="text2" color="#1b1b19" width="2" debug-text></a-text>
@@ -40,7 +40,7 @@
         <a-box 
             id="colored_box" position="-1 1 -0.5"
             depth="0.2" height="0.2" width="0.2"
-            color="red" shadow="cast: true" pinch-moveable
+            color="blue" shadow="cast: true" pinch-moveable
         ></a-box>
 
         <a-entity 
