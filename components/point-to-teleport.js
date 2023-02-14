@@ -20,7 +20,7 @@ AFRAME.registerComponent('point-to-teleport', {
       this.el.addEventListener("pressedstarted", function(e) { 
         if (e.target == teleButton) {
           // teleButton.setAttribute("position", "0 2 -1");
-          teleButton.setAttribute("position", { x: handEl.getAttribute(position)x , y: handEl.getAttribute(position)x , z: handEl.getAttribute(position)x});
+          teleButton.setAttribute("position", { x: handEl.getAttribute(position).x , y: handEl.getAttribute(position).y , z: handEl.getAttribute(position).z});
           handEl.object3D.add(teleButton.object3D);
           }
         })
