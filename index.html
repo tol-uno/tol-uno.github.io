@@ -18,7 +18,10 @@
             <a-asset-item id="bag" src="https://cdn.jsdelivr.net/gh/tol-uno/3D-assets@main/poly.glb"></a-asset-item>
             <a-asset-item id="duck" src="https://cdn.jsdelivr.net/gh/tol-uno/3D-assets@main/DuckTex.glb"></a-asset-item>
             <a-asset-item id="environment" src="assets/GalleryEnvironment_v1.glb"></a-asset-item>
+            <a-asset-item id="shoes" src="assets/shoes.glb"></a-asset-item>
             <img id="sky" src="assets/sky.jpg">
+            <img id="painting" src="assets/painting.jpg">
+            <audio id="sound" src="assets/sound.wav"></audio>
 
         </a-assets>
     
@@ -38,13 +41,13 @@
         <a-entity position="0 0 0" scale="0.01 0.01 0.01" gltf-model="#duck" shadow="cast: true"></a-entity>
         <a-entity position="0 0 0" scale="1 1 1" gltf-model="#environment" shadow="receive: true"></a-entity>
 
-        <a-box 
+        <a-box
             id="colored_box" position="-1 1 -0.5"
             depth="0.2" height="0.2" width="0.2"
             color="blue" shadow="cast: true" pinch-moveable
         ></a-box>
 
-        <a-entity 
+        <a-entity
             id="boxGeometry"
             position="0 1.2 -.5"
             rotation="45 45 0"
@@ -52,7 +55,14 @@
             material="color: #ff4b5c"
             pressable
         ></a-entity>
-        
+
+        <a-box position="0.5 .4 1" depth="0.4" height="0.8" width="0.4" color="#0f1014" shadow="cast: true"></a-box>
+        <!-- <a-entity position="0.5 .8 1" scale="1 1 1" gltf-model="#shoes" shadow="cast: true"></a-entity> -->
+        <a-entity position="0.54 .8 0.96" rotation="0 -134 0" scale="0.001 0.001 0.001" gltf-model="#shoes" shadow="cast: true"></a-entity>
+
+        <a-sound src="#sound" autoplay="true" position="-2 1 2" volume="1"></a-sound>
+        <a-image src="#painting" width="3.124" height="2" position="-3 1.5 0" rotation="0 -90 0"></a-image>
+
 
         <a-entity light="type: point; intensity: 2; distance: 30; decay: 1; castShadow:true; shadowBias: -0.002" position="0 4 0"></a-entity>
         <a-entity light="type: point; intensity: 0.8; distance: 90; decay: 2" position="0 7 7"></a-entity>
