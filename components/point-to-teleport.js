@@ -21,7 +21,8 @@ AFRAME.registerComponent('point-to-teleport', {
         if (e.target == teleButton) {
           // teleButton.setAttribute("position", "0 2 -1");
           teleButton.setAttribute("position", { x: handEl.getAttribute("position").x , y: handEl.getAttribute("position").y , z: handEl.getAttribute("position").z});
-          handEl.object3D.add(teleButton.object3D);
+          document.querySelector("#text3").setAttribute("value", "x: " + handEl.getAttribute("position").x + " y: " + handEl.getAttribute("position").y + " z: " + handEl.getAttribute("position").z +);
+          // handEl.object3D.add(teleButton.object3D);
           }
         })
     },
