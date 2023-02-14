@@ -20,8 +20,16 @@ AFRAME.registerComponent('point-to-teleport', {
       this.el.addEventListener("pressedstarted", function(e) { 
         if (e.target == teleButton) {
           // teleButton.setAttribute("position", "0 2 -1");
-          teleButton.setAttribute("position", { x: handEl.getAttribute("position").x , y: handEl.getAttribute("position").y , z: handEl.getAttribute("position").z});
-          document.querySelector("#text3").setAttribute("value", "x: " + handEl.getAttribute("position").x + " y: " + handEl.getAttribute("position").y + " z: " + handEl.getAttribute("position").z);
+
+          var fingerx = handEl.components['hand-tracking-controls'].indexTipPosition.x
+          var fingery = handEl.components['hand-tracking-controls'].indexTipPosition.y
+          var fingerz = handEl.components['hand-tracking-controls'].indexTipPosition.z
+
+          teleButton.setAttribute("position", { x: fingerx , y: fingery , z: fingerz});
+          document.querySelector("#text3").setAttribute("value", "x: " + fingerx + " y: " + fingery+ " z: " + fingerz);
+          
+
+        
           // handEl.object3D.add(teleButton.object3D);
           }
         })
