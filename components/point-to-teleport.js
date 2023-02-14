@@ -16,7 +16,7 @@ AFRAME.registerComponent('point-to-teleport', {
       teleButton.setAttribute("pressable", {pressDistance: "0.02"});
       teleButton.setAttribute("geometry", "primitive: sphere; radius: 0.02");
       teleButton.setAttribute("position", "0 1.3 -1");
-      this.el.addEventListener("pressedstarted", function(e) { 
+      this.el.addEventListener("pressedstarted", function(e) {
         if (e.target == teleButton) {
           // teleButton.setAttribute("position", "0 2 -1");
 
@@ -41,7 +41,7 @@ AFRAME.registerComponent('point-to-teleport', {
     },
 
     tick: function () { // every frame
-
+      teleButton.setAttribute("position", { x: fingerx , y: fingery , z: fingerz});
     },    
 
   });

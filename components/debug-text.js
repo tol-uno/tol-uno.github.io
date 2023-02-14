@@ -10,7 +10,7 @@ AFRAME.registerComponent("debug-text", {
       
         this.el.sceneEl.addEventListener("pressedstarted", function(e) {
         // when entity with pressable starts being pressed 
-        // text1.setAttribute("value", "pressed red cube started");
+        text1.setAttribute("value", "pressed red cube started");
         });
         this.el.sceneEl.addEventListener("pressedended", function(e) {
             // when entity with pressable stops being pressed 
