@@ -29,9 +29,9 @@ AFRAME.registerComponent('point-to-teleport', {
           var jointsArray = handEl.components['hand-tracking-controls'].jointEls;
 
           // document.querySelector("#text3").setAttribute("value", "x: " + fingerx + " y: " + fingery+ " z: " + fingerz);
-          document.querySelector("#text1").setAttribute("value", handEl.components['hand-tracking-controls'].jointEls.length);
-          document.querySelector("#text2").setAttribute("value", handEl.components['hand-tracking-controls'].jointEls[0].values);
-          document.querySelector("#text3").setAttribute("value", showProps(jointsArray[0], "jointsArray[0]"));
+          document.querySelector("#text1").setAttribute("value", handEl.components['hand-tracking-controls'].jointEls[wrist]);
+          document.querySelector("#text2").setAttribute("value", jointsArray[0].keys(jointsArray[0]));
+          document.querySelector("#text3").setAttribute("value", jointsArray);
           
 
         
@@ -42,20 +42,7 @@ AFRAME.registerComponent('point-to-teleport', {
 
     tick: function () { // every frame
 
-    },
-
-    showProps: function (obj, objName) {
-      let result = "";
-      for (const i in obj) {
-        // Object.hasOwn() is used to exclude properties from the object's
-        // prototype chain and only show "own properties"
-        if (Object.hasOwn(obj, i)) {
-          result += `${objName}.${i} = ${obj[i]}\n`;
-        }
-      }
-      console.log(result);
-    }
-    
+    },    
 
   });
   
