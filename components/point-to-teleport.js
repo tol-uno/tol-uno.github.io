@@ -1,4 +1,5 @@
 /* global AFRAME, THREE */    // what?
+
 AFRAME.registerComponent('point-to-teleport', {
     schema: {
       // pressDistance: { default: 0.06 }
@@ -10,8 +11,9 @@ AFRAME.registerComponent('point-to-teleport', {
       
       console.log(handEl.components['hand-tracking-controls']);
 
-
       var teleButton = document.createElement("a-entity");
+      teleButton.setAttribute("id", "teleButton");
+
       this.el.appendChild(teleButton);
       teleButton.setAttribute("pressable", {pressDistance: "0.02"});
       teleButton.setAttribute("geometry", "primitive: sphere; radius: 0.02");
@@ -41,7 +43,6 @@ AFRAME.registerComponent('point-to-teleport', {
     },
 
     tick: function () { // every frame
-      teleButton.setAttribute("position", { x: fingerx , y: fingery , z: fingerz});
     },    
 
   });
