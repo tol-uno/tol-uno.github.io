@@ -7,7 +7,7 @@ AFRAME.registerComponent('point-to-teleport', {
     init: function () {
       
       // this.worldPosition = new THREE.Vector3();
-      // this.handEls = document.querySelectorAll('[hand-tracking-controls]');
+      handEls = document.querySelector('[hand-tracking-controls]');
       // this.pressed = false;
 
       //   this.el.emit('pressedended');
@@ -19,13 +19,15 @@ AFRAME.registerComponent('point-to-teleport', {
       teleButton.setAttribute("position", "0 1.3 -1");
       this.el.addEventListener("pressedstarted", function(e) { 
         if (e.target == teleButton) {
-          teleButton.setAttribute("position", "0 2 -1");
+          // teleButton.setAttribute("position", "0 2 -1");
+          // teleButton.setAttribute("position", { x: ,y:,z: });
+          handEl.object3D.add(teleButton.object3D);
           }
         })
     },
 
     tick: function () { // every frame
-      
+
     },
 
   });
