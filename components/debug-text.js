@@ -16,7 +16,6 @@ AFRAME.registerComponent("debug-text", {
             // when entity with pressable stops being pressed 
             text1.setAttribute("value", "NOT pressing red cube");
         });
-        
     },
   
     updateText: function (text) {      // Update Text

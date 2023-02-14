@@ -11,17 +11,21 @@ AFRAME.registerComponent('point-to-teleport', {
       // this.pressed = false;
 
       //   this.el.emit('pressedended');
-      //   console.log("tried to emit pinchmoved");
-      
+
       var teleButton = document.createElement("a-entity");
       this.el.appendChild(teleButton);
       teleButton.setAttribute("pressable", {pressDistance: "0.02"});
-      teleButton.setAttribute("geometry", "primitive: sphere; radius: 0.04");
+      teleButton.setAttribute("geometry", "primitive: sphere; radius: 0.02");
       teleButton.setAttribute("position", "0 1.3 -1");
+      this.el.addEventListener("pressedstarted", function(e) { 
+        if (e.target == teleButton) {
+          teleButton.setAttribute("position", "0 2 -1");
+          }
+        })
     },
-  
+
     tick: function () { // every frame
     },
-  
+
   });
   

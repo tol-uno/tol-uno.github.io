@@ -24,15 +24,11 @@
     
         <a-camera></a-camera>
 
-        <a-entity id="leftHand" hand-tracking-controls="hand: left; modelStyle: dots; modelColor: #b4b5ad">
-            <a-box 
-            id="telebutton" position="0 0.1 0"
-            depth="0.1" height="0.1" width="0.1"
-            color="blue"
-            ></a-box>
-        </a-entity>
+
+        <a-entity id="leftHand" hand-tracking-controls="hand: left; modelStyle: dots; modelColor: #b4b5ad" point-to-teleport></a-entity>
         <a-entity id="rightHand" hand-tracking-controls="hand: right; modelStyle: dots; modelColor: #b4b5ad"></a-entity>
         
+
         <a-text id="text1" position="0 1.6 -1" value="text1" color="#1b1b19" width="2" debug-text></a-text>
         <a-text id="text2" position="0 1.3 -1" value="text2" color="#1b1b19" width="2" debug-text></a-text>
         <a-text id="text3" position="0 1 -1" value="text3" color="#1b1b19" width="2" debug-text></a-text>
@@ -40,7 +36,7 @@
         <a-entity position="0 0.141 -.4" rotation="0 -60 0" gltf-model="#bag" shadow="cast: true"></a-entity>
         <a-entity position="0 0 0" scale="0.01 0.01 0.01" gltf-model="#duck" shadow="cast: true"></a-entity>
         <a-entity position="0 0 0" scale="1 1 1" gltf-model="#environment" shadow="receive: true"></a-entity>
-        <!-- <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7d7c77" shadow="receive: true"></a-plane> -->
+
         <a-box 
             id="colored_box" position="-1 1 -0.5"
             depth="0.2" height="0.2" width="0.2"
@@ -59,21 +55,11 @@
 
         <a-entity light="type: point; intensity: 2; distance: 30; decay: 1; castShadow:true; shadowBias: -0.002" position="0 4 0"></a-entity>
         <a-entity light="type: point; intensity: 0.8; distance: 90; decay: 2" position="0 7 7"></a-entity>
+        <a-entity light="type: ambient; color: #FFF; intensity: 0.5;"></a-entity>
 
 
         <!-- <a-sky src="#sky"></a-sky> -->
         <a-sky color="#808080"></a-sky>
-
-        <a-entity light="type: ambient; color: #FFF; intensity: 0.5;"></a-entity>
-        
-        <!-- <a-entity light="   type: directional;
-                            intensity: 1;
-                            castShadow: true;
-                            shadowCameraFar: 30;
-                            shadowCameraLeft: -15;
-                            shadowCameraVisible: true;"
-                    position="1 2 1"></a-entity> -->
-        <!-- <a-light type="directional" light="castShadow:true;" position="1 1 1" intensity="2" shadow-camera-automatic="#environment"></a-light> -->
         
     
     </a-scene>
