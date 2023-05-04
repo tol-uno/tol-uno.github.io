@@ -12,7 +12,14 @@
 <body>
 
     <!-- <a-scene fog="type: linear; color: #FFF; near: 2; far: 60;"> -->
-    <a-scene>
+    <a-scene renderer="
+    antialias: true; 
+    colorManagement: true; 
+    sortObjects: true; 
+    physicallyCorrectLights: true;
+    toneMapping: ACESFilmic;
+    exposure: 5;
+    " >
 
         <a-assets>
             <a-asset-item id="bag" src="https://cdn.jsdelivr.net/gh/tol-uno/3D-assets@main/poly.glb"></a-asset-item>
@@ -42,7 +49,7 @@
         <a-entity position="0 0.141 -.4" rotation="0 -60 0" gltf-model="#bag" shadow="cast: true"></a-entity>
         <a-entity position="0 0 0" scale="0.01 0.01 0.01" gltf-model="#duck" shadow="cast: true"></a-entity>
     -->
-        <a-entity position="0 0 0" scale="1 1 1" gltf-model="#environment" shadow="receive: true"></a-entity>
+        <a-entity position="-1.5 0 -1.7" scale="1 1 1" gltf-model="#environment" shadow="receive: true; cast: true"></a-entity>
 
     <!-- 
         <a-box
@@ -73,14 +80,22 @@
         <a-image src="#painting" width="3.124" height="2" position="-3 1.5 0" rotation="0 -90 0"></a-image>
 
     -->
-    
-        <a-entity light="type: point; intensity: 2; distance: 30; decay: 1; castShadow:true; shadowBias: -0.002" position="0 4 0"></a-entity>
-        <a-entity light="type: point; intensity: 0.8; distance: 90; decay: 2" position="0 7 7"></a-entity>
+
+        <a-light type="directional" light="
+        castShadow:true; 
+        shadowBias: -0.001;
+        shadowMapHeight:2048; 
+        shadowMapWidth:2048;
+        "
+        
+        position="-0.6 5 1" intensity="1" shdadow-camera-automatic="#objects"></a-light>
+
+        <!-- <a-entity light="type: point; intensity: 2; distance: 30; decay: 1; castShadow:true; shadowBias: -0.002" position="0 4 0"></a-entity> -->
+        <!-- <a-entity light="type: point; intensity: 0.8; distance: 90; decay: 2" position="0 7 7"></a-entity> -->
         <a-entity light="type: ambient; color: #FFF; intensity: 0.5;"></a-entity>
 
-
-        <!-- <a-sky src="#sky"></a-sky> -->
-        <a-sky color="#808080"></a-sky>
+        <a-sky src="#sky"></a-sky>
+        <!-- <a-sky color="#808080"></a-sky> -->
         
     
     </a-scene>
