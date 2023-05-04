@@ -2,9 +2,9 @@
 <html>
 <head>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="components/pinch-moveable.js"></script>
-    <script src="components/debug-text.js"></script>
-    <script src="components/point-to-teleport.js"></script>
+    <!-- <script src="components/pinch-moveable.js"></script> -->
+    <!-- <script src="components/debug-text.js"></script> -->
+    <!-- <script src="components/point-to-teleport.js"></script> -->
     <script src="components/pressable.js"></script> <!-- could be replaced with someone elses component on github -->
     
 
@@ -30,12 +30,10 @@
     
         <a-camera></a-camera>
 
-        <a-entity id="leftHand" hand-tracking-controls="hand: left; modelStyle: dots; modelColor: #b4b5ad" point-to-teleport>
-            <a-sphere radius="0.04" color="green" position="0 0.02 0"></a-sphere>
-        </a-entity>
+        <a-entity id="leftHand" hand-tracking-controls="hand: left; modelStyle: dots; modelColor: #b4b5ad" point-to-teleport></a-entity>
         <a-entity id="rightHand" hand-tracking-controls="hand: right; modelStyle: dots; modelColor: #b4b5ad"></a-entity>
 
-
+    <!-- 
         <a-text id="text1" position="1 1.6 -.5" rotation="0 -90 0" value="text1" color="#1b1b19" width="2" debug-text></a-text>
         <a-text id="text2" position="1 1.3 -.5" rotation="0 -90 0" value="text2" color="#1b1b19" width="2" debug-text></a-text>
         <a-text id="text3" position="1 1 -.5" rotation="0 -90 0" value="text3" color="#1b1b19" width="2" debug-text></a-text>
@@ -43,15 +41,18 @@
 
         <a-entity position="0 0.141 -.4" rotation="0 -60 0" gltf-model="#bag" shadow="cast: true"></a-entity>
         <a-entity position="0 0 0" scale="0.01 0.01 0.01" gltf-model="#duck" shadow="cast: true"></a-entity>
+    -->
         <a-entity position="0 0 0" scale="1 1 1" gltf-model="#environment" shadow="receive: true"></a-entity>
 
+    <!-- 
         <a-box
             id="colored_box" position="-1 1 -0.5"
             depth="0.2" height="0.2" width="0.2"
             color="gray" shadow="cast: true" pinch-moveable
-        ></a-box>
+        ></a-box> 
+        
 
-        <a-entity
+            <a-entity
             id="boxGeometry"
             position="0 1.2 -.5"
             rotation="45 45 0"
@@ -60,8 +61,8 @@
             pressable
         ></a-entity>
 
+
         <a-box position="0.5 .5 1" depth="0.5" height="1" width="0.5" color="#0f1014" shadow="cast: true"></a-box>
-        <!-- <a-entity position="0.5 .8 1" scale="1 1 1" gltf-model="#shoes" shadow="cast: true"></a-entity> -->
         <a-entity gltf-model="#shoes" position="0.54 1 0.96" rotation="0 -134 0" scale="0.0012 0.0012 0.0012" shadow="cast: true"></a-entity>
         <a-entity gltf-model="#monkey" position="-1.2 3.2 -8" rotation="0 110 0" scale="8 8 8" shadow="cast: true; receive: true"></a-entity>
         <a-entity gltf-model="#eva" position="2.1 0.65 -6" rotation="0 90 90" scale="3 3 3" shadow="cast: false"></a-entity>
@@ -71,7 +72,8 @@
         <a-sound src="#sound" autoplay="true" position="-2 1 2" volume="1"></a-sound>
         <a-image src="#painting" width="3.124" height="2" position="-3 1.5 0" rotation="0 -90 0"></a-image>
 
-
+    -->
+    
         <a-entity light="type: point; intensity: 2; distance: 30; decay: 1; castShadow:true; shadowBias: -0.002" position="0 4 0"></a-entity>
         <a-entity light="type: point; intensity: 0.8; distance: 90; decay: 2" position="0 7 7"></a-entity>
         <a-entity light="type: ambient; color: #FFF; intensity: 0.5;"></a-entity>
